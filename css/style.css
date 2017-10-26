@@ -46,6 +46,10 @@
 	font-family: Ubuntu;
 }
 
+body {
+	-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
 .main-menu__url {
 	color: white;
 }
@@ -58,8 +62,8 @@
 
 .pager {
 	position: fixed;
-	right: 30px;
-	top: 70px;
+	right: 33px;
+	top: 75px;
 }
 
 .pager__items {
@@ -146,11 +150,11 @@
 }
 
 .logo {
-	margin: 12px 0 0 80px;
+	margin: 8px 0 0 80px;
 }
 
 .menu {
-	margin: 15px 0 0 80px;
+	margin: 2px 0 0 0;
 	display: flex;
 	align-items: center;
 }
@@ -158,7 +162,8 @@
 .main-menu__items {
 	display: flex;
 	height: 35px;
-	margin-right: 0px;
+	margin-right: -6px;
+	letter-spacing: -0.38px;
 }
 
 .main-menu__item {
@@ -186,7 +191,7 @@
 	height: 35px;
 	background-color: #e45028;
 	border-radius: 4px;
-	margin-right: 64px;
+	margin-right: 60px;
 }
 
 .table-wrapper {
@@ -198,12 +203,14 @@
 }
 
 .main-page__table {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	width: 852px;
-	height: 350px;
-	margin-top: -80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 880px;
+    height: 342px;
+    margin-top: -90px;
+    margin-left: 0px;
+    /*flex: 1;*/
 
 
 }
@@ -212,19 +219,20 @@
 	position: relative;
 	background-image: url(../images/drops.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+    background-size: cover;
+    height: 238px;
 }
 
 .main-page__burger_img {
 	position: relative;
-	left: 10px;
+	left: 35px;
 	top: -70px;
 }
 
 .main-page__titles {
 	display: flex;
 	flex-direction: column;
-	margin-left: 30px;
+	margin-left: 50px;
 	margin-top: 60px;
 }
 
@@ -238,14 +246,16 @@
 	font-family: Lifehack;
 	font-size: 65px;
 	color: white;
-	margin-top: 20px;
+	margin-top: 24px;
+    line-height: 62px;
+    letter-spacing: -1.78px;	
 }
 
 .main-page__down {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: -40px;
+	margin-top: -41px;
 }
 
 .best {
@@ -263,23 +273,24 @@
 }
 
 .c__best {
-	justify-content: center;
+	justify-content: top;
 }
 
 .best-title {
 	font-family: gagalin;
-	font-size: 72px;
-	color: #2f3234;
-	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 90px;
+    font-size: 72px;
+    color: #2f3234;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    margin-left: 18px;
 }
 
 .prefs {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 0 70px;
+	margin: 0 87px;
 }
 
 .pref {
@@ -307,7 +318,7 @@
 	font-size: 14.03px;
 	color: #575959;
 	text-align: center;
-	line-height: 20px;
+	line-height: 24px;
 }
 
 .burger {
@@ -337,11 +348,24 @@
 	width: 25%;
 	height: 325px;
 	display: flex;
+	position: relative;
+}
+
+.review__background {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-color: black;
+	z-index: 1;
 }
 
 .review__info {
-	display: flex;
+	position:relative;
+	display: none;
 	flex-direction: column;
+	z-index: 2;
 
 }
 
@@ -378,16 +402,11 @@
 
 }
 
-.hide {
-	background-color: black;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	opacity: 0;
+.review__more:hover {
+	background-color: #1f2122;
 }
+
+
 .review1 {
 	background-image: url(../images/r1.jpg);
 }
@@ -420,7 +439,11 @@
 	background-image: url(../images/r8.jpg);
 }
 
-.review:hover>.hide {
-	opacity: 0.5;
+.review:hover>.review__info {
+	display: flex;
+}
+
+.review:hover>.review__background {
+	display: block;
 }
 
