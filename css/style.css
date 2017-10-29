@@ -790,7 +790,7 @@ body {
   line-height: 24px;
   white-space: 1px; }
 
-.burger {
+.slider {
   background-image: -moz-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   background-image: -webkit-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   background-image: -ms-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
@@ -806,6 +806,10 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.team {
+  background: url(../../images/bg_team.jpg) center no-repeat;
+  background-size: cover; }
 
 .reviews {
   display: -webkit-box;
@@ -957,3 +961,66 @@ body {
 
 .review:hover > .review__background {
   display: block; }
+
+.order {
+  background: url(../../images/bg_order.jpg) center no-repeat;
+  background-size: cover; }
+
+.burger-map {
+  background: url(../../images/map.jpg) center no-repeat;
+  background-size: cover;
+  height: 100%; }
+
+.footer {
+  height: 58px;
+  background: url(../../images/bg_footer.jpg) center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.adress, .phone {
+  font-family: ubuntu;
+  font-weight: normal;
+  color: white;
+  font-size: 14px; }
+
+.contacts {
+  margin-left: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.phone {
+  font-weight: bold;
+  color: #da4d27; }
+
+.social {
+  margin-right: 80px; }
+
+.social__items {
+  list-style: none; }
+
+.social__item {
+  float: left;
+  margin-left: 20px;
+  color: white; }
