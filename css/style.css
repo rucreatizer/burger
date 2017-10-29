@@ -599,7 +599,11 @@ body {
   padding-top: 10px;
   text-transform: uppercase;
   outline: none;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  cursor: pointer; }
+
+.order-button:hover {
+  background-color: #c1401e; }
 
 .table-wrapper {
   display: -webkit-box;
@@ -713,8 +717,6 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -749,7 +751,7 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 0 87px; }
+  margin: 0 90px; }
 
 .pref {
   display: -webkit-box;
@@ -765,7 +767,8 @@ body {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-right: -15px; }
 
 .pref__img {
   height: 90px;
@@ -776,7 +779,8 @@ body {
   font-size: 21.4px;
   color: #2f3234;
   text-align: center;
-  width: 80%; }
+  width: 80%;
+  letter-spacing: 1.2px; }
 
 .pref__text {
   font-family: Ubuntu;
@@ -784,7 +788,8 @@ body {
   font-size: 14.03px;
   color: #575959;
   text-align: center;
-  line-height: 24px; }
+  line-height: 24px;
+  white-space: 1px; }
 
 .burger {
   background-image: -moz-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
@@ -817,6 +822,23 @@ body {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
+.c__review {
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto; }
+
 .rew-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -848,7 +870,9 @@ body {
   display: flex;
   position: relative;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 .review__background {
   display: none;
