@@ -897,9 +897,9 @@ body {
   font-family: gagalin;
   font-size: 14px;
   color: white;
-  margin-top: 50px;
+  margin-top: 45px;
   margin-left: 20px;
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .review__text {
   font-family: ubuntu;
@@ -907,8 +907,9 @@ body {
   font-size: 14px;
   color: white;
   margin-left: 20px;
-  margin-bottom: 17px;
-  line-height: 20px; }
+  margin-bottom: 23px;
+  line-height: 24.5px;
+  width: 85%; }
 
 .review__more {
   font-family: ubuntu;
