@@ -1,4 +1,101 @@
 .team {
 	background: url(../../images/bg_team.jpg) center no-repeat;
 	background-size: cover;
+	position: relative;
+}
+
+.info-block {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: url(../../images/bg_team.png) no-repeat center center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-info {
+	margin: auto;
+}
+
+.team__title {
+	font-family: gagalin;
+	font-size: 72px;
+	color: #f9b43b;
+	text-transform: uppercase;
+	margin-bottom: 90px;
+	display: block;
+}
+
+.team__people {
+	margin-bottom: 40px;
+}
+.team__people>.more__info {
+	height: 0px;
+	overflow: hidden;
+}
+
+.team__people_active>.more__info {
+	height: 100px;
+}
+
+.team__people_active>.team__name {
+	color: #f9b43b;
+}
+
+.triangle {
+	width: 5px;
+	height: 6px;
+	border: 5px solid transparent;	
+	border-top: 7px solid #f9b43b;
+	float: left;
+	margin-right: 10px;
+	margin-top: 6px;
+}
+
+.team__people_active>.triangle {
+	transform: rotate(-180deg);
+	transition: transform 1s;	
+	margin-top: 0px;
+}
+
+.team__name {
+	font-family: gagalin;
+	font-size: 14px;
+	color: white;
+}
+
+.more__info {
+	margin-top: 17px;
+	margin-left: 17px;
+}
+.team__foto {
+	width: 100px;
+	height: 100px;
+	background: url(../../images/team_face.png) no-repeat center center;
+	background-size: cover;
+	float: left;
+	margin-right: 21px;
+}
+
+.team__rank {
+	font-family: ubuntu;
+	font-size: 14px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.team__description {
+	font-family: ubuntu;
+	font-size: 14px;
+	color: white;
+	font-weight: 500;
+	width: 350px;
+	line-height: 25px;
 }

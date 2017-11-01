@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?<?php echo time(); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Mr. Burger</title>
 </head>
 
@@ -23,7 +24,7 @@
                                 <li class="main-menu__item"><a href="#slider" class="main-menu__url">Бургеры </a></li>
                                 <li class="main-menu__item"><a href="#team" class="main-menu__url">Команда </a></li>
                                 <li class="main-menu__item"><a href="#menu" class="main-menu__url">Меню</a></li>
-                                <li class="main-menu__item"><a href=a "#review" class="main-menu__url">Отзывы</a></li>
+                                <li class="main-menu__item"><a href="#review" class="main-menu__url">Отзывы</a></li>
                                 <li class="main-menu__item"><a href="#map" class="main-menu__url">Контакты</a></li>
                             </ul>
                         </nav>
@@ -82,8 +83,75 @@
             </div>
         </section>
         <section class="section slider" id="slider"></section>
-        <section class="section team" id="team"></section>
-        <section class="section menu" id="menu"></section>
+        <section class="section team" id="team">
+            <div class="info-block">
+                <div class="team-info">
+                    <span class="team__title">команда</span>
+                    <div class="accordeon">
+                        <div class="team__people clearfix">
+                            <div class="triangle"></div>
+                            <div class="team__name">Дэниэл Редклиф</div>
+                            <div class="more__info">
+                                <div class="team__foto"></div>
+                                <div class="team__rank"></div>
+                                <div class="team__description"></div>
+                            </div>
+                        </div>
+                        <div class="team__people team__people_active clearfix">
+                            <div class="triangle"></div>
+                            <div class="team__name">Ричард Джеймс</div>
+                            <div class="more__info">
+                                <div class="team__foto"></div>
+                                <div class="team__rank">Оператор</div>
+                                <div class="team__description">
+                                    C радостью поможет подобрать идеальный бургер и оформить заказ.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__people clearfix">
+                            <div class="triangle"></div>
+                            <div class="team__name">Джейк Финн</div>
+                            <div class="more__info">
+                                <div class="team__foto"></div>
+                                <div class="team__rank"></div>
+                                <div class="team__description"></div>
+                            </div>
+                        </div>
+                        <div class="team__people clearfix">
+                            <div class="triangle"></div>
+                            <div class="team__name">Николай Иванов</div>
+                            <div class="more__info">
+                                <div class="team__foto"></div>
+                                <div class="team__rank"></div>
+                                <div class="team__description"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section menu" id="menu">
+            <div class="wrapper-menu">
+                <span class="menu__main-title">меню</span>
+                <div class="menu__items">
+                    <div class="menu__item">
+                        <div class="menu__title"><span class="menu__title_text">Для мясоедов</span></div>
+                        <div class="menu__description">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                        </div>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__title"><span class="menu__title_text">Вегетарианское</span></div>
+                        <div class="menu__description">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                        </div>
+                    </div>
+                    <div class="menu__item">
+                        <div class="menu__title"><span class="menu__title_text">Диетическое</span></div>
+                        <div class="menu__description">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section reviews" id="review">
             <div class="container c__review">
                 <section class="rew-wrapper">
@@ -171,15 +239,6 @@
             </div>
         </section>
         <section class="section order" id="order">
-            12345
-            фыв
-            фыв
-            фы
-            в
-            фыв
-            фы
-            в
-            фы
         </section>
         <section class="section map" id="map">
             <div class="burger-map">

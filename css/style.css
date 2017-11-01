@@ -492,6 +492,11 @@ body {
   width: 100%;
   height: 100vh; }
 
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block; }
+
 .main-menu__url {
   color: white; }
 
@@ -809,7 +814,192 @@ body {
 
 .team {
   background: url(../../images/bg_team.jpg) center no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.info-block {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url(../../images/bg_team.png) no-repeat center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.team-info {
+  margin: auto; }
+
+.team__title {
+  font-family: gagalin;
+  font-size: 72px;
+  color: #f9b43b;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+  display: block; }
+
+.team__people {
+  margin-bottom: 40px; }
+
+.team__people > .more__info {
+  height: 0px;
+  overflow: hidden; }
+
+.team__people_active > .more__info {
+  height: 100px; }
+
+.team__people_active > .team__name {
+  color: #f9b43b; }
+
+.triangle {
+  width: 5px;
+  height: 6px;
+  border: 5px solid transparent;
+  border-top: 7px solid #f9b43b;
+  float: left;
+  margin-right: 10px;
+  margin-top: 6px; }
+
+.team__people_active > .triangle {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  margin-top: 0px; }
+
+.team__name {
+  font-family: gagalin;
+  font-size: 14px;
+  color: white; }
+
+.more__info {
+  margin-top: 17px;
+  margin-left: 17px; }
+
+.team__foto {
+  width: 100px;
+  height: 100px;
+  background: url(../../images/team_face.png) no-repeat center center;
+  background-size: cover;
+  float: left;
+  margin-right: 21px; }
+
+.team__rank {
+  font-family: ubuntu;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.team__description {
+  font-family: ubuntu;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  width: 350px;
+  line-height: 25px; }
+
+.wrapper-menu {
+  width: 100%;
+  height: 100vh;
+  background: url(../../images/bg_menu.jpg) no-repeat center left;
+  background-size: cover;
+  position: relative; }
+
+.menu__main-title {
+  position: absolute;
+  left: 94px;
+  top: 112px;
+  right: 0;
+  bottom: 0;
+  font-size: 74px;
+  font-family: gagalin;
+  color: white; }
+
+.menu__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.menu__item {
+  width: 80px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border: 1px solid red;
+  overflow: hidden;
+  background-size: cover;
+  position: relative; }
+
+.menu__item:nth-of-type(1) {
+  background: url(../../images/bg_menu_item_1.jpg) no-repeat center;
   background-size: cover; }
+
+.menu__item:nth-of-type(2) {
+  background: url(../../images/bg_menu_item_2.jpg) no-repeat center;
+  background-size: cover; }
+
+.menu__item:nth-of-type(3) {
+  background: url(../../images/bg_menu_item_3.jpg) no-repeat center;
+  background-size: cover; }
+
+.menu__title {
+  width: 80px; }
+  .menu__title .menu__title_text {
+    position: absolute;
+    font-family: gagalin;
+    left: 25%;
+    top: 40%;
+    right: 0;
+    bottom: 30%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 40px;
+    white-space: nowrap;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    text-align: center; }
+
+.menu__description {
+  width: 0px;
+  overflow: hidden; }
 
 .reviews {
   display: -webkit-box;
@@ -966,13 +1156,22 @@ body {
   background: url(../../images/bg_order.jpg) center no-repeat;
   background-size: cover; }
 
+.map {
+  position: relative; }
+
 .burger-map {
   background: url(../../images/map.jpg) center no-repeat;
   background-size: cover;
-  height: 100%;
-  margin-bottom: -58px; }
+  height: 100%; }
 
 .footer {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -webkit-transform: translate(0, -58px);
+  -ms-transform: translate(0, -58px);
+  transform: translate(0, -58px);
+  width: 100%;
   height: 58px;
   background: url(../../images/bg_footer.jpg) center no-repeat;
   background-size: cover;
