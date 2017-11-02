@@ -1,4 +1,148 @@
 .order {
-	background: url(../../images/bg_order.jpg) center no-repeat;
+	background: url(../../images/bg_order.jpg) center center no-repeat;
 	background-size: cover;
 }
+
+.order__title {
+
+	font-size: 74px;
+	font-family: gagalin;
+	color: #f9b43b;
+	padding-top: 90px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 90px;
+	text-align: center;
+
+}
+.form {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin: 0 80px;
+}
+
+.form__title {
+	color: white;
+}
+
+.form-col {
+	width: 48%;
+}
+
+.form__input {
+	border: none;
+	border-radius: 3px;
+	padding: 5px 10px;
+	width: 100%;
+	margin-bottom: 23px;
+
+}
+
+.form-row {
+	display: flex;
+	flex-direction: row;
+}
+.form-block {
+	flex: 1;
+	margin-right: 10px;
+}
+
+.name__title{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px;
+	&:after {
+		clear: both;
+	}
+	color: white;
+	margin-bottom: 10px;
+}
+
+.radio__item {
+	position: relative;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #fff;
+	float: left;
+	margin-right: 9px;
+}
+
+.radio__item-payment{
+	position: absolute;
+	left:-99999999999px;
+}
+
+.radio__item-payment:checked~.radio__item>.radio__item_select {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;	
+	background-color: #e35028;
+
+}
+
+.form-checkbox {
+	position: absolute;
+	left:-99999999999px;	
+}
+
+.checkbox__form {
+	margin-top: 15px;
+} 
+.checkbox__item {
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	position: relative;
+	float:left;
+	margin-right: 9px;
+
+}
+
+.checkbox__item_select {
+	position: absolute;
+	left: 2px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	background: url(../../images/checked.png) center center no-repeat;
+	background-size: cover;
+}
+
+.form-checkbox:checked~.checkbox__item>.checkbox__item_select {
+	width: 11px;
+	height: 9px;
+}
+
+.button__order {
+	padding: 13px 16px;
+	text-transform: uppercase;
+	background-color: #e45028;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	align-self: center;
+	margin-top: 22px;
+	outline: none;
+	&:hover {
+        background-color: #c1401e;   
+        cursor: pointer; 
+    }
+}
+
+.button__reset {
+	margin-left: 20px;
+	color: white;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	&:hover {
+        text-decoration: underline;   
+        cursor: pointer; 
+    }
+}
+
