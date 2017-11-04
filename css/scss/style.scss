@@ -1,0 +1,14 @@
+@import "normalize.scss"; //Нормалайз
+@import "fonts.scss"; //Подключение шрифтов
+
+@import "general.scss"; // Общие стили
+
+@import "section_main.scss"; // Основной экран
+@import "section_best.scss"; // Мы лучшие
+@import "section_slider.scss"; //Слайдер
+@import "section_team.scss"; //Команда
+@import "section_menu.scss"; //меню
+@import "section_review.scss"; //Отзывы
+@import "section_order.scss"; //Заказ
+@import "section_map.scss"; //Карта
+@import "section_footer.scss"; //Подвал

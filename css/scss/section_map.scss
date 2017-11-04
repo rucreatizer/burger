@@ -1,0 +1,46 @@
+.burger-map {
+	background: url(../../images/map.jpg) center no-repeat;
+	background-size: cover;
+	height: 100%;
+	margin-bottom: -58px;
+}
+.footer {
+	height: 58px;
+	background: url(../../images/bg_footer.jpg) center no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.adress, .phone {
+	font-family: ubuntu;
+	font-weight: normal;
+	color: white;
+	font-size: 14px;
+}
+
+.contacts {
+	margin-left: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.phone {
+	font-weight: bold;
+	color: #da4d27;
+}
+
+.social {
+	margin-right: 80px;
+}
+
+.social__items {
+	list-style: none;
+}
+
+.social__item {
+	float: left;
+	margin-left: 20px;
+	color: white;
+}
