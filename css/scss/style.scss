@@ -1,3 +1,7 @@
+@import "vars.scss"; //Переменные
+@import "mixin.scss"; //Примеси
+@import "media.scss"; // Функции для адаптива
+
 @import "normalize.scss"; //Нормалайз
 @import "fonts.scss"; //Подключение шрифтов
 
@@ -12,4 +16,7 @@
 @import "section_order.scss"; //Заказ
 @import "section_map.scss"; //Карта
 @import "section_footer.scss"; //Подвал
+
+
+
 

@@ -11,6 +11,7 @@
 
 <body>
     <div class="wrapper">
+        <div class="content">
         <section class="main-page" id="main-page">
             <div class="container">
                 <section class="header">
@@ -30,6 +31,7 @@
                         </nav>
                         <button class="order-button"><a href="#order" class="main-menu__url">Заказать</a>
                         </button>
+                        <a href="#"><div class="burger-menu"></div></a>
                     </section>
                 </section>
                 <div class="table-wrapper">
@@ -49,7 +51,7 @@
             </div>
         </section>
         <section class="best" id="best">
-            <div class="container c__best">
+            <div class="container c-best">
                 <span class="best-title">Мы лучшие</span>
                 <div class="prefs">
                     <section class="pref">
@@ -155,7 +157,7 @@
         <section class="section reviews" id="review">
             <div class="container c__review">
                 <section class="rew-wrapper">
-                    <section class="review review1">
+                    <section class="review" style="background-image: url(images/r1.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -165,7 +167,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review2">
+                    <section class="review" style="background-image: url(images/r2.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -175,7 +177,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review3">
+                    <section class="review" style="background-image: url(images/r3.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -185,7 +187,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review4">
+                    <section class="review" style="background-image: url(images/r4.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -195,7 +197,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review5">
+                    <section class="review" style="background-image: url(images/r5.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -205,7 +207,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review6">
+                    <section class="review" style="background-image: url(images/r6.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -215,7 +217,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review7">
+                    <section class="review" style="background-image: url(images/r7.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -225,7 +227,7 @@
                         </div>
                         <div class="review__background"></div>
                     </section>
-                    <section class="review review8">
+                    <section class="review" style="background-image: url(images/r8.jpg);">
                         <div class="review__info">
                             <span class="review__name">Константин Спилберг</span>
                             <span class="review__text">
@@ -288,7 +290,6 @@
                         <div class="form-row clearfix">
                             <label for="payments" class="form-block">
                                 <input class="radio__item-payment" type="radio" id="payments" name="pay">
-
                                 <div class="radio__item">
                                     <div class="radio__item_select"></div>
                                 </div>
@@ -299,13 +300,12 @@
                                 <div class="radio__item">
                                     <div class="radio__item_select"></div>
                                 </div>
-                                <span class="name__title">Оплата по карте</span>                                
+                                <span class="name__title">Оплата по карте</span>
                             </label>
                         </div>
                         <div class="form-row checkbox__form clearfix">
                             <label class="form-block">
                                 <input class="form-checkbox" type="checkbox">
-
                                 <div class="checkbox__item">
                                     <div class="checkbox__item_select"></div>
                                 </div>
@@ -313,9 +313,9 @@
                             </label>
                         </div>
                         <div class="form-row">
-                                <button type="submit" class="button__order">заказать</button>
-                                <button type="reset" class="button__reset">Очистить</button>
-                        </div>                        
+                            <button type="submit" class="button__order">заказать</button>
+                            <button type="reset" class="button__reset">Очистить</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -326,7 +326,14 @@
             <section class="footer">
                 <div class="contacts">
                     <span class="adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
-                    <span class="phone">+7 (812) 377-13-77</span>
+                    <div class="phone__info">
+                        <div class="phone__img" style="float: left; margin-right: 8px;">
+                            <svg width="12px" height="12px">
+                                <use x="0" y="0" width="12px" height="12px" viewBox="0 2 1920 76" fill="#e35028" xlink:href="images/sprite.svg#phone" />
+                            </svg>
+                        </div>
+                        <div class="phone">+7 (812) 377-13-77</div>
+                    </div>
                 </div>
                 <div class="social">
                     <ul class="social__items">
@@ -394,6 +401,7 @@
                 </a>
             </ul>
         </section>
+        </div>
     </div>
 </body>
 

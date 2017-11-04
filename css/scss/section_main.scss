@@ -1,11 +1,13 @@
 .main-menu__url {
     color: white;
+    white-space: nowrap;
+
 }
 
 .header>* {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 13px;
+    font-size: rem(13px);
 }
 
 
@@ -17,7 +19,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     background-image: url(../images/main-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,11 +30,12 @@
 
 
 .container {
-    width: 1100px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    min-height: rem(650px);
 }
 
 .header {
@@ -42,62 +45,91 @@
 }
 
 .logo {
-    margin: 8px 0 0 80px;
+    margin: rem(8px) 0 0 rem(80px);
 }
 
 .menu {
-    margin: 2px 0 0 0;
+    margin: rem(2px) 0 0 0;
     display: flex;
     align-items: center;
 }
 
+.main-menu {
+
+        @include tabletshelp {
+        display: none;
+
+    } 
+}
 .main-menu__items {
     display: flex;
-    height: 35px;
-    margin-right: -6px;
-    letter-spacing: -0.38px;
+    height: rem(35px);
+    margin-right: rem(-6px);
+    letter-spacing: rem(0px);
+
 }
 
 .main-menu__item {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 18px;
+    margin-right: rem(18px);
 }
 
 .main-menu__item:nth-of-type(-n+5):after {
     content: "";
     position: relative;
-    margin-left: 16px;
-    width: 2px;
-    height: 2px;
-    border: 1px solid white;
+    margin-left: rem(16px);
+    width: rem(2px);
+    height: rem(2px);
+    border: rem(1px) solid white;
     border-radius: 50%;
     background-color: white;
 }
 
 .order-button {
 
-    padding: 13px 16px;
-    height: 35px;
+    padding: rem(13px) rem(16px);
+    height: rem(35px);
     background-color: #e45028;
-    border-radius: 4px;
-    margin-right: 60px;
-    padding-top: 10px;
+    border-radius: rem(4px);
+    margin-right: rem(30px);
+    padding-top: rem(10px);
     text-transform: uppercase;
     outline: none;
-    border: 1px solid transparent;
+    border: rem(1px) solid transparent;
     cursor: pointer;
-    
+
     &:hover {
-        background-color: #c1401e;    
+        background-color: #c1401e;
     }
 }
 
+.burger-menu {
+    display:none;
+    position: relative;
+    width: rem(24px);
+    height: rem(22px);
+    border-bottom: rem(4px) solid white;
+    border-top: rem(4px) solid white;
+    margin-right: rem(30px);
+    &:after {
+        position: absolute;
+        width: rem(24px);
+        height: rem(22px);
+        top: rem(5px); 
+        left: 0;
+        content:'';
+        border-top: rem(4px) solid white;
+    }
+
+    @include tabletshelp {
+        display: block;
+    }
+}
 
 .table-wrapper {
     display: flex;
-    width: auto;
     height: 85%;
     justify-content: center;
     align-items: center;
@@ -107,51 +139,67 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 880px;
-    height: 342px;
-    margin-top: -90px;
-    margin-left: 0px;
+    //width: rem(880px);
+    //height: rem(342px);
+    margin-top: rem(-90px);
+    margin-left: rem(0px);
+    justify-content: center;
+    align-items: center;
+
+    @include tabletshelp {
+        flex-direction: column;
+    }
 }
 
 .main-page__burger {
     position: relative;
-    background-image: url(../images/drops.png);
+    /*background-image: url(../images/drops.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 238px;
+    height: rem(238px);*/
 }
 
 .main-page__burger_img {
     position: relative;
-    left: 35px;
-    top: -70px;
+    //left: rem(35px);
+    //top: rem(-70px);
 }
 
 .main-page__titles {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
-    margin-top: 60px;
+    margin-left: rem(50px);
+    margin-top: rem(60px);
+
+    @include tabletshelp {
+        margin-top: 0;
+        text-align:center;
+        width: 80%;
+    }
 }
 
 .main-page__main_title {
-  font-family: gagalin;
-    font-size: 72px;
+    font-family: gagalin;
+    font-size: rem(72px);
     color: #f9b43b;
+
+    @include tabletshelp {
+
+    }
 }
 
 .main-page__second_title {
     font-family: Lifehack;
-    font-size: 65px;
+    font-size: rem(65px);
     color: white;
-    margin-top: 24px;
-    line-height: 62px;
-    letter-spacing: -1.78px;
+    margin-top: rem(24px);
+    line-height: rem(62px);
+    letter-spacing: rem(-2px);
 }
 
 .main-page__down {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -41px;
+    margin-top: rem(-41px);
 }
