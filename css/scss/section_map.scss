@@ -51,6 +51,8 @@
 .phone__info {
 	@include phones {
 		margin-top: rem(10px);
+		display: inline-table;
+		align-self: center
 	}
 }
 .phone {
@@ -81,6 +83,10 @@
 
 .social__items {
 	list-style: none;
+
+	@include phones {
+		margin-left: -50px;
+	}
 }
 
 .social__item {

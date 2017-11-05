@@ -987,10 +987,6 @@ body {
 .team__name {
   position: relative;
   height: 25px; }
-  @media screen and (max-width: 865px) {
-    .team__name {
-      text-align: center;
-      display: inline-block; } }
 
 .team__people_active > .team__name {
   color: #f9b43b; }
@@ -1553,7 +1549,11 @@ body {
 
 @media screen and (max-width: 480px) {
   .phone__info {
-    margin-top: 0.625rem; } }
+    margin-top: 0.625rem;
+    display: inline-table;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; } }
 
 .phone {
   display: block;
@@ -1574,6 +1574,9 @@ body {
 
 .social__items {
   list-style: none; }
+  @media screen and (max-width: 480px) {
+    .social__items {
+      margin-left: -50px; } }
 
 .social__item {
   float: left;
