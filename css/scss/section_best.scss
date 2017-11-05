@@ -16,7 +16,11 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;    
+    margin: 0 auto;  
+
+        @include phones {
+        justify-content: top;
+    }  
 }
 
 .best-title {
@@ -27,6 +31,10 @@
     margin-top: rem(60px);
     margin-bottom: rem(80px);
     margin-left: rem(18px);
+
+    @include phones {
+        margin-top: rem(0px)
+    }
 }
 
 .prefs {
@@ -38,6 +46,11 @@
     @include tabletshelp {
         margin: 0 rem(28px);
     }
+
+    @include phones {
+        flex-direction: column;
+        width: 90%;
+    }
 }
 
 .pref {
@@ -46,11 +59,31 @@
     width: 32%;
     align-items: center;
     margin-right: rem(-15px);
+
+        @include phones {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: rem(55px);
+    }
 }
 
 .pref__img {
     height: rem(90px);
     margin-bottom: rem(30px);
+
+    @include phones {
+        margin-right: rem(40px);
+        width: 30%;
+    }
+}
+
+.pref__descr {
+    text-align: center;
+    width: 63%;
+
+    @include phones {
+        text-align: left;
+    }
 }
 
 .pref__title {
@@ -58,8 +91,13 @@
     font-size: rem(21px);
     color: #2f3234;
     text-align: center;
-    width: 80%;
+    //width: 80%;
     letter-spacing: rem(1px);
+
+}
+
+.pref__descr {
+    width: 80%;
 }
 
 .pref__text {
@@ -70,4 +108,8 @@
     text-align: center;
     line-height: rem(24px);
     white-space: rem(1px);
+
+    @include phones {
+        text-align: left;
+    }
 }

@@ -1,150 +1,159 @@
 .team {
-	background: url(../../images/bg_team.jpg) center no-repeat;
-	background-size: cover;
-	position: relative;
+    background: url(../images/bg_team.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .info-block {
-	position: absolute;
-	width: 50%;
-	height: 100%;
-	left: 50%;
-	right: 0;
-	bottom: 0;
-	top: 0;
-	background: url(../../images/bg_team.png) no-repeat center center;
-	background-size: cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: url(../images/bg_team.png) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	@include tabletshelp {
-		width: 100%;
-		left: 0;
-	}
+    @include tabletshelp {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .team-info {
-	margin: auto;
+    margin: auto;
 }
 
 .accordeon {
-	@include tabletshelp {
-		text-align: center;
-	}
+    @include tabletshelp {
+        text-align: center;
+    }
 }
+
 .team__title {
-	font-family: gagalin;
-	font-size: rem(72px);
-	color: #f9b43b;
-	text-transform: uppercase;
-	margin-bottom: rem(90px);
-	display: block;
+    font-family: gagalin;
+    font-size: rem(72px);
+    color: #f9b43b;
+    text-transform: uppercase;
+    margin-bottom: rem(90px);
+    display: block;
+
+    @include phones {
+        text-align: center;
+    }
 }
 
 .team__people {
-	margin-bottom: rem(40px);
-
-	@include tabletshelp {
-		//display: inline-block;
-	}
+    margin-bottom: rem(40px);
+ 
+    @include tabletshelp {
+        //display: inline-block;
+    }
 }
+
+
 .team__people>.more__info {
-	height: rem(0px);
-	overflow: hidden;
+    height: rem(0px);
+    overflow: hidden;
 }
 
 .team__people_active>.more__info {
-	height: rem(100px);
+    height: rem(100px);
 
-	@include tabletshelp {
-		height: 11.25rem;
-	}
+    @include tabletshelp {
+        height: 11.25rem;
+    }
 }
 
 .team__name {
-	@include tabletshelp {
-		text-align: center;
-		display: inline-block;
-	}
+	position: relative;
+	height: 25px;	
+    @include tabletshelp {
+        text-align: center;
+        display: inline-block;
+    }
 }
+
 .team__people_active>.team__name {
-	color: #f9b43b;
+    color: #f9b43b;
 }
 
 .triangle {
-	width: rem(5px);
-	height: rem(6px);
-	border: rem(5px) solid transparent;	
-	border-top: rem(7px) solid #f9b43b;
-	float: left;
-	margin-right: rem(10px);
-	margin-top: rem(6px);
+    width: rem(5px);
+    height: rem(6px);
+    border: rem(5px) solid transparent;
+    border-top: rem(7px) solid #f9b43b;
+    float: left;
+    margin-right: rem(10px);
+    margin-top: rem(6px);
 }
 
 .team__people_active>.triangle {
-	transform: rotate(-180deg);
-	transition: transform 1s;	
-	margin-top: rem(0px);
+    transform: rotate(-180deg);
+    transition: transform 1s;
+    margin-top: rem(0px);
 }
 
 .team__name {
-	font-family: gagalin;
-	font-size: rem(14px);
-	color: white;
+    font-family: gagalin;
+    font-size: rem(14px);
+    color: white;
 
-	@include tabletshelp {
-		font-size: 1.8rem;
-	}
+    @include tabletshelp {
+        font-size: 1.8rem;
+    }
 }
 
 .more__info {
-	margin-top: rem(17px);
-	margin-left: rem(17px);
+    margin-top: rem(17px);
+    margin-left: rem(17px);
 
-	@include tabletshelp {
-		text-align: center;
-	}
+    @include tabletshelp {
+        text-align: center;
+    }
 }
+
 .team__foto {
-	width: rem(100px);
-	height: rem(100px);
-	background: url(../../images/team_face.png) no-repeat center center;
-	background-size: cover;
-	float: left;
-	margin-right: rem(21px);
+    width: rem(100px);
+    height: rem(100px);
+    background: url(../images/team_face.png) no-repeat center center;
+    background-size: cover;
+    float: left;
+    margin-right: rem(21px);
 
-	@include tabletshelp {
-		clear: both;
-		float: none;
-		display: inline-block;
-		margin-right: 0;
-
-	}
+    @include tabletshelp {
+        clear: both;
+        float: none;
+        display: inline-block;
+        margin-right: 0;
+    }
 }
 
 .team__rank {
-	font-family: ubuntu;
-	font-size: rem(14px);
-	color: white;
-	font-weight: bold;
-	margin-bottom: rem(10px);
+    font-family: ubuntu;
+    font-size: rem(14px);
+    color: white;
+    font-weight: bold;
+    margin-bottom: rem(10px);
 
-	@include tabletshelp {
-		text-align: center;
-	}
+    @include tabletshelp {
+        text-align: center;
+    }
 }
 
 .team__description {
-	font-family: ubuntu;
-	font-size: rem(14px);
-	color: white;
-	font-weight: 500;
-	width: rem(350px);
-	line-height: rem(25px);
+    font-family: ubuntu;
+    font-size: rem(14px);
+    color: white;
+    font-weight: 500;
+    width: rem(350px);
+    line-height: rem(25px);
 
-		@include tabletshelp {
-		text-align: center;
-		//width: auto;
-	}
+    @include tabletshelp {
+        text-align: center; //width: auto;
+    }
 }

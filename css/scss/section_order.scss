@@ -1,5 +1,5 @@
 .order {
-	background: url(../../images/bg_order.jpg) center center no-repeat;
+	background: url(../images/bg_order.jpg) center center no-repeat;
 	background-size: cover;
 }
 
@@ -14,6 +14,11 @@
 	margin-bottom: rem(90px);
 	text-align: center;
 
+	@include phones {
+		padding-top: rem(15px);
+		margin-bottom: rem(15px);
+	}
+
 }
 .form {
 	display: flex;
@@ -25,6 +30,10 @@
 		flex-direction: column;
 		align-items: center;
 	}
+
+	@include phones {
+		margin: 0 rem(10px);
+	}	
 }
 
 .form__title {
@@ -37,6 +46,10 @@
 	@include tabletshelp {
 		width: 75%;
 	}
+
+	@include phones {
+		width: 95%;
+	}	
 }
 
 .form__input {
@@ -122,7 +135,7 @@
 	top: rem(3px);
 	width: 0;
 	height: 0;
-	background: url(../../images/checked.png) center center no-repeat;
+	background: url(../images/checked.png) center center no-repeat;
 	background-size: cover;
 }
 

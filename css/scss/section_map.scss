@@ -2,7 +2,7 @@
 	position: relative;
 }
 .burger-map {
-	background: url(../../images/map.jpg) center no-repeat;
+	background: url(../images/map.jpg) center no-repeat;
 	background-size: cover;
 	height: 100%;
 	//margin-bottom: rem(-58px);
@@ -14,11 +14,18 @@
 	transform: translate(0,rem(-58px));
 	width: 100%;
 	height: rem(58px);
-	background: url(../../images/bg_footer.jpg) center no-repeat;
+	background: url(../images/bg_footer.jpg) center no-repeat;
 	background-size: cover;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	@include phones {
+		flex-direction: column;
+		height: rem(100px);
+		transform: translate(0,rem(-100px));
+		padding-top: rem(10px);
+	}
 }
 
 .adress, .phone {
@@ -26,6 +33,7 @@
 	font-weight: normal;
 	color: white;
 	font-size: rem(14px);
+
 }
 
 .contacts {
@@ -33,21 +41,42 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+
+	@include phones {
+		margin-left: 0;
+		text-align: center;
+	}
 }
 
+.phone__info {
+	@include phones {
+		margin-top: rem(10px);
+	}
+}
 .phone {
 	display: block;
 	font-weight: bold;
 	color: #da4d27;
 	margin-left: rem(80px);
+
+	@include phones {
+		margin-left: 0;
+		display: inline-block;
+	}
 }
 
 .contacts use {
-	fill: #FFF;
+	//fill: #FFF;
 }
 
 .social {
 	margin-right: rem(80px);
+
+	@include phones {
+		margin: 0 auto;
+		text-align: center;
+
+	}
 }
 
 .social__items {

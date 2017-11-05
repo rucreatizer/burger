@@ -67,6 +67,10 @@ transition: opacity 0.9s;
     margin-top: rem(45px);
     margin-left: rem(20px);
     margin-bottom: rem(20px);
+
+    @include phones {
+        font-size: rem(28px);
+    }
 }
 
 .review__text {
@@ -78,6 +82,10 @@ transition: opacity 0.9s;
     margin-bottom: rem(23px);
     line-height: rem(25px);
     width: 85%;
+
+    @include phones {
+        display: none;
+    }
 }
 
 .review__more {
@@ -91,6 +99,20 @@ transition: opacity 0.9s;
     border-radius: rem(5px);
     margin-left: rem(20px);
     margin-left: rem(20px);
+}
+
+.review__more {
+    font-family: ubuntu;
+    font-size: rem(13px);
+    text-transform: uppercase;
+    color: white;
+    width: rem(110px);
+    padding: rem(13px) rem(15px);
+    background-color: #2f3234;
+    border-radius: rem(5px);
+    margin-left: rem(20px);
+    margin-left: rem(20px);
+     
 }
 
 .review__more:hover {

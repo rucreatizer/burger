@@ -5,6 +5,10 @@ html {
     @include tabletshelp {
         font-size: 14px;
     }
+
+    @include phones {
+        font-size: 12px;
+    }
 }
 *,
 button {

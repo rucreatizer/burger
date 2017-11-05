@@ -133,6 +133,8 @@
     height: 85%;
     justify-content: center;
     align-items: center;
+
+
 }
 
 .main-page__table {
@@ -149,6 +151,10 @@
     @include tabletshelp {
         flex-direction: column;
     }
+
+            @include phones {
+        width: 95%;
+    }
 }
 
 .main-page__burger {
@@ -163,6 +169,10 @@
     position: relative;
     //left: rem(35px);
     //top: rem(-70px);
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .main-page__titles {
@@ -186,6 +196,10 @@
     @include tabletshelp {
 
     }
+
+    @include phones {
+        font-size: rem(50px);
+    }
 }
 
 .main-page__second_title {
@@ -195,6 +209,10 @@
     margin-top: rem(24px);
     line-height: rem(62px);
     letter-spacing: rem(-2px);
+
+    @include phones {
+        font-size: rem(50px);
+    }
 }
 
 .main-page__down {
