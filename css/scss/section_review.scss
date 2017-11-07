@@ -12,7 +12,9 @@
     margin: 0 auto;    
 }
 
-.rew-wrapper {
+.rew-wrapper {  
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

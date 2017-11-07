@@ -35,7 +35,7 @@
 }
 
 .team__title {
-    font-family: gagalin;
+    font-family: gagalin,Helvetica,sans-serif;
     font-size: rem(72px);
     color: #f9b43b;
     text-transform: uppercase;
@@ -83,13 +83,14 @@
 }
 
 .triangle {
-    width: rem(5px);
-    height: rem(6px);
+    //width: rem(5px);
+    //height: rem(6px);
     border: rem(5px) solid transparent;
     border-top: rem(7px) solid #f9b43b;
     float: left;
     margin-right: rem(10px);
     margin-top: rem(6px);
+    border-bottom: 0 solid transparent;
 }
 
 .team__people_active>.triangle {

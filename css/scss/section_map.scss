@@ -48,6 +48,9 @@
 	}
 }
 
+.phone__img>svg {
+	float: left;
+}
 .phone__info {
 	@include phones {
 		margin-top: rem(10px);
@@ -59,10 +62,10 @@
 	display: block;
 	font-weight: bold;
 	color: #da4d27;
-	margin-left: rem(80px);
+	margin-left: rem(20px);
 
 	@include phones {
-		margin-left: 0;
+		margin-left: rem(10px);
 		display: inline-block;
 	}
 }

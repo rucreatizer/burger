@@ -24,15 +24,16 @@ body {
     //height: 100%;
 }
 
-.pager {
-    position: fixed;
-    right: rem(33px);
-    top: rem(75px);
-}
-
 .pager__items {
     list-style: none;
     position: relative;
+    position: fixed;
+    right: rem(33px);
+    top: rem(75px); 
+
+    @include tabletshelp {
+        display: none;
+    }   
 }
 
 .pager__item {
