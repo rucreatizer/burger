@@ -12,7 +12,9 @@
     margin: 0 auto;    
 }
 
-.rew-wrapper {
+.rew-wrapper {  
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -28,6 +30,11 @@
     background-size: cover;
     background-position: center;    
     filter: grayscale(100%); 
+
+    @include tabletshelp {
+        width: 50%;
+        height: 25vh;
+    }
 }
 
 .review__background {
@@ -38,6 +45,10 @@
     opacity: 0.5;
     background-color: black;
     z-index: 1;
+-webkit-transition: opacity 0.9s;
+-moz-transition: opacity 0.9s;
+-o-transition: opacity 0.9s;
+transition: opacity 0.9s;
 }
 
 .review__info {
@@ -45,39 +56,65 @@
     display: none;
     flex-direction: column;
     z-index: 2;
+
+    @include tabletshelp {
+        text-align: center;
+    }
 }
 
 .review__name {
     font-family: gagalin;
-    font-size: 14px;
+    font-size: rem(14px);
     color: white;
-    margin-top: 45px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-top: rem(45px);
+    margin-left: rem(20px);
+    margin-bottom: rem(20px);
+
+    @include phones {
+        font-size: rem(28px);
+    }
 }
 
 .review__text {
     font-family: ubuntu;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: rem(14px);
     color: white;
-    margin-left: 20px;
-    margin-bottom: 23px;
-    line-height: 24.5px;
+    margin-left: rem(20px);
+    margin-bottom: rem(23px);
+    line-height: rem(25px);
     width: 85%;
+
+    @include phones {
+        display: none;
+    }
 }
 
 .review__more {
     font-family: ubuntu;
-    font-size: 13px;
+    font-size: rem(13px);
     text-transform: uppercase;
     color: white;
-    width: 110px;
-    padding: 13px 15px;
+    width: rem(110px);
+    padding: rem(13px) rem(15px);
     background-color: #2f3234;
-    border-radius: 5px;
-    margin-left: 20px;
-    margin-left: 20px;
+    border-radius: rem(5px);
+    margin-left: rem(20px);
+    margin-left: rem(20px);
+}
+
+.review__more {
+    font-family: ubuntu;
+    font-size: rem(13px);
+    text-transform: uppercase;
+    color: white;
+    width: rem(110px);
+    padding: rem(13px) rem(15px);
+    background-color: #2f3234;
+    border-radius: rem(5px);
+    margin-left: rem(20px);
+    margin-left: rem(20px);
+     
 }
 
 .review__more:hover {
@@ -85,37 +122,7 @@
 }
 
 
-.review1 {
-    background-image: url(../images/r1.jpg);
-}
 
-.review2 {
-    background-image: url(../images/r2.jpg);
-}
-
-.review3 {
-    background-image: url(../images/r3.jpg);
-}
-
-.review4 {
-    background-image: url(../images/r4.jpg);
-}
-
-.review5 {
-    background-image: url(../images/r5.jpg);
-}
-
-.review6 {
-    background-image: url(../images/r6.jpg);
-}
-
-.review7 {
-    background-image: url(../images/r7.jpg);
-}
-
-.review8 {
-    background-image: url(../images/r8.jpg);
-}
 
 .review:hover>.review__info {
     display: flex;
