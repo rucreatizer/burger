@@ -1,10 +1,12 @@
-.slider {
+.sliders {
     background-image: -moz-linear-gradient( 90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
     background-image: -webkit-linear-gradient( 90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
     background-image: -ms-linear-gradient( 90deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
 }
 
 .container_slider {
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -92,6 +94,9 @@
         text-align: center;
         align-self: center;
     }
+    @include phones {
+        margin-bottom: rem(5px);
+    }
 }
 
 .slider__text {
@@ -113,7 +118,7 @@
         left: 80%;
     }
     @include phones {
-        top: rem(-120px);
+        top: rem(-90px);
         left: 70%;
     }
 }
@@ -132,7 +137,7 @@
         left: 83%;
     }
     @include phones {
-        top: rem(-80px);
+        top: rem(-50px);
         left: 77%;
     }
 }
@@ -145,7 +150,8 @@
         top: rem(-50px);
     }
     @include phones {
-        top: rem(-120px);
+        top: rem(-90px);
+        width: rem(90px);
     }
     &:hover+.slider__menu {
         display: block;
@@ -194,14 +200,31 @@
     @include tabletslarge {
         margin-bottom: rem(-150px);
     }
+    @include phones {
+        margin-bottom: rem(-20px);
+    }
+}
+
+.sliders {
+    width: auto;
 }
 
 .slider__leftarrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
     transform: rotate(90deg);
 }
 
 .slider__rightarrow {
-    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, 0) rotate(-90deg);
+}
+
+.slider-item {
+    display: inline-block;
 }
 
 .slider__content {
@@ -233,7 +256,9 @@
         align-self: center;
     }
     @include phones {
-        widows: 95%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
@@ -243,8 +268,11 @@
     @include tabletslarge {
         display: flex;
         flex-direction: column;
-        margin-top: rem(0px);
+        margin-top: rem(-10px);
         align-self: center;
         width: 80%;
+    }
+    @include phones {
+        width: 95%;
     }
 }
