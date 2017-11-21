@@ -11,6 +11,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    align-self: center;
     @include phones {
         padding-top: rem(120px);
     }
@@ -93,18 +94,22 @@
     @include tabletslarge {
         text-align: center;
         align-self: center;
+        margin-bottom: rem(00px);
     }
     @include phones {
         margin-bottom: rem(5px);
+        width: 100%;
     }
 }
 
 .slider__text {
+    width: 80%;
     font-family: ubuntu;
     font-size: rem(14px);
     color: white;
     line-height: rem(20px);
     @include tabletslarge {
+        width: 100%;
         text-align: center;
     }
 }
@@ -152,6 +157,7 @@
     @include phones {
         top: rem(-90px);
         width: rem(90px);
+        left: rem(0px);
     }
     &:hover+.slider__menu {
         display: block;
@@ -214,6 +220,10 @@
     top: 50%;
     left: 0;
     transform: rotate(90deg);
+    z-index: 9999999999999999999999;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .slider__rightarrow {
@@ -221,20 +231,27 @@
     top: 50%;
     left: 100%;
     transform: translate(-100%, 0) rotate(-90deg);
+    z-index: 9999999999999999999999;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .slider-item {
     display: inline-block;
+    width: 90%;
 }
 
 .slider__content {
     position: relative;
     display: flex;
     flex-direction: row;
+    //height: rem(500px);
+    //height: auto;
     @include tabletslarge {
         flex-direction: column;
         justify-content: center;
-        width: 85%;
+        //width: 90%;
     }
 }
 
@@ -252,27 +269,69 @@
 .prices {
     @include tabletslarge {
         display: flex;
+        justify-content: center;
         align-items: baseline;
         align-self: center;
+        width: 100%;
     }
     @include phones {
-        width: 100%;
+        //width: 50%;
         align-items: center;
         justify-content: space-between;
     }
 }
 
 .slider__descr {
-    width: 50%;
-    margin-top: rem(-130px);
+    width: 95%;
+    // margin-top: rem(-130px);
     @include tabletslarge {
         display: flex;
         flex-direction: column;
-        margin-top: rem(-10px);
+        // margin-top: rem(-10px);
         align-self: center;
-        width: 80%;
+        width: 95%;
     }
     @include phones {
         width: 95%;
     }
 }
+
+.slide__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 50%;
+    margin-top: rem(120px);
+    text-align: center;
+    display: flex;
+    float: left;
+    word-wrap: normal;
+    @include phones {
+        margin-top: rem(20px);
+    }
+}
+
+.slides {
+    position: relative;
+    width: 200%;
+    display: table;
+    align-content: center;
+    list-style: none;
+    padding: 0;
+    padding-top: rem(70px);
+    margin: 0;
+    left: 0;
+    top: 0;
+    transition: left .3s;
+    //display: inline;
+}
+
+.slider {
+    position: relative;
+}
+
+// onepagescroll

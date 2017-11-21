@@ -3,7 +3,9 @@
 let body = document.querySelector("body");
 
 let burger = document.getElementById("burger-menu");
-burger.addEventListener("click", showMenu);
+//burger.addEventListener("click touch", showMenu);
+$('.burger-menu').on('click touch', showMenu);
+
 let burgerClose = document.getElementById("close__button_mob");
 burgerClose.addEventListener("click", hideMenu);
 let burgerMenu = document.getElementsByClassName("mobile__menu_item");
@@ -32,6 +34,8 @@ document.getElementById("review-more__close").addEventListener('click', function
     //console.log(this);
     document.getElementById("review-more").classList.add("hide");
 })
+
+// Слайдер
 
 
 
@@ -92,3 +96,25 @@ function setMenuItemEvents() {
 }
 
 setMenuItemEvents();
+
+
+// Слайдер
+let burgerCount = $('.slide').length; // Количество бургеров
+let sliderWidth = burgerCount * 100; // Ширина "окна" в зависимости от кол-ва бургеров
+$('.slides').css('width', sliderWidth + '%'); // Устанавливаем ширину "окна"
+let left = 0; // Выясняем начальное положение "окна"
+
+$('.slider__leftarrow').on('click', e => { // Если тыкаем влево, то...
+    if (left < 0) {
+        left = left + 100;
+        console.log(left);
+        $('.slides').css('left', left + '%');
+    }
+});
+
+$('.slider__rightarrow').on('click', e => {
+    if (left > 100 - sliderWidth) {
+        left = left - 100;
+        $('.slides').css('left', left + '%');
+    }
+});
