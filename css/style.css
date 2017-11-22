@@ -2118,6 +2118,9 @@ body {
 .social__item {
   float: left;
   margin-left: 1.25rem;
+  fill: #626262; }
+
+.social__item use {
   fill: #626262;
   -webkit-transition: fill .4s ease;
   -o-transition: fill .4s ease;

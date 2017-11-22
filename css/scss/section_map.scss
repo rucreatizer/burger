@@ -100,7 +100,12 @@
     float: left;
     margin-left: rem(20px);
     fill: #626262;
+}
+
+.social__item use {
+    fill: #626262;
     transition: fill .4s ease;
+    ;
 }
 
 .social__item:hover use {
