@@ -30,8 +30,7 @@
     margin: 0 auto;
     min-height: rem(650px);
     max-width: 58.75rem;
-min-width: 18.75rem;
-
+    min-width: 18.75rem;
     @include phones {
         width: 100%;
     }
@@ -45,6 +44,10 @@ min-width: 18.75rem;
 
 .logo {
     margin: rem(8px) 0 0 rem(80px);
+    z-index: 99999999;
+    @include phones {
+        margin-left: rem(10px);
+    }
 }
 
 .menu {

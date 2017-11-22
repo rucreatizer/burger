@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
 }
 
 .c__review {
@@ -9,10 +10,10 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
-.rew-wrapper {  
+.rew-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
@@ -28,9 +29,8 @@
     display: flex;
     position: relative;
     background-size: cover;
-    background-position: center;    
-    filter: grayscale(100%); 
-
+    background-position: center;
+    filter: grayscale(100%);
     @include tabletshelp {
         width: 50%;
         height: 25vh;
@@ -45,10 +45,10 @@
     opacity: 0.5;
     background-color: black;
     z-index: 1;
--webkit-transition: opacity 0.9s;
--moz-transition: opacity 0.9s;
--o-transition: opacity 0.9s;
-transition: opacity 0.9s;
+    -webkit-transition: opacity 0.9s;
+    -moz-transition: opacity 0.9s;
+    -o-transition: opacity 0.9s;
+    transition: opacity 0.9s;
 }
 
 .review__info {
@@ -56,7 +56,6 @@ transition: opacity 0.9s;
     display: none;
     flex-direction: column;
     z-index: 2;
-
     @include tabletshelp {
         text-align: center;
     }
@@ -69,7 +68,6 @@ transition: opacity 0.9s;
     margin-top: rem(45px);
     margin-left: rem(20px);
     margin-bottom: rem(20px);
-
     @include phones {
         font-size: rem(28px);
     }
@@ -84,7 +82,6 @@ transition: opacity 0.9s;
     margin-bottom: rem(23px);
     line-height: rem(25px);
     width: 85%;
-
     @include phones {
         display: none;
     }
@@ -114,15 +111,11 @@ transition: opacity 0.9s;
     border-radius: rem(5px);
     margin-left: rem(20px);
     margin-left: rem(20px);
-     
 }
 
 .review__more:hover {
     background-color: #1f2122;
 }
-
-
-
 
 .review:hover>.review__info {
     display: flex;
@@ -130,4 +123,40 @@ transition: opacity 0.9s;
 
 .review:hover>.review__background {
     display: block;
+}
+
+.review-more {
+    position: absolute;
+    width: 90%;
+    z-index: 9999999999999;
+    left: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px 15px;
+    &>.review-more__title {
+        font-family: gagalin;
+        font-weight: bold;
+    }
+    &>.review-more__text {
+        font-family: ubuntu;
+        font-weight: normal;
+        font-size: rem(14px);
+        line-height: rem(25px);
+        margin: 0;
+        margin-top: rem(16px);
+    }
+    &>.review-more__close {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.hide {
+    display: none;
 }
