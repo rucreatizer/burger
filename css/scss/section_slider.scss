@@ -13,7 +13,7 @@
     align-items: center;
     align-self: center;
     @include phones {
-        padding-top: rem(120px);
+        padding-top: rem(10px);
     }
 }
 
@@ -99,6 +99,7 @@
     @include phones {
         margin-bottom: rem(5px);
         width: 100%;
+        font-size: rem(52px);
     }
 }
 
