@@ -4,10 +4,14 @@
 }
 
 .burger-map {
-    background: url(../images/map.jpg) center no-repeat;
-    background-size: cover;
+    // background: url(../images/map.jpg) center no-repeat;
+    // background-size: cover;
+    width: 100%;
     height: 100%;
-    //margin-bottom: rem(-58px);
+    margin-bottom: rem(-58px);
+    @include phones {
+        margin-bottom: rem(-100px)
+    }
 }
 
 .footer {
@@ -24,9 +28,10 @@
     justify-content: space-between;
     @include phones {
         flex-direction: column;
+        justify-content: flex-start;
         height: rem(100px);
         transform: translate(0, rem(-100px));
-        padding-top: rem(10px);
+        padding-top: rem(2px);
     }
 }
 
@@ -79,7 +84,7 @@
 .social {
     margin-right: rem(80px);
     @include phones {
-        margin: 0 auto;
+        margin: -10px auto;
         text-align: center;
     }
 }

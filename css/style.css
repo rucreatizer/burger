@@ -2007,9 +2007,12 @@ body {
   min-height: initial; }
 
 .burger-map {
-  background: url(../images/map.jpg) center no-repeat;
-  background-size: cover;
-  height: 100%; }
+  width: 100%;
+  height: 100%;
+  margin-bottom: -3.625rem; }
+  @media screen and (max-width: 480px) {
+    .burger-map {
+      margin-bottom: -6.25rem; } }
 
 .footer {
   position: absolute;
@@ -2042,11 +2045,15 @@ body {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       height: 6.25rem;
       -webkit-transform: translate(0, -6.25rem);
       -ms-transform: translate(0, -6.25rem);
       transform: translate(0, -6.25rem);
-      padding-top: 0.625rem; } }
+      padding-top: 0.125rem; } }
 
 .adress,
 .phone {
@@ -2099,7 +2106,7 @@ body {
   margin-right: 5rem; }
   @media screen and (max-width: 480px) {
     .social {
-      margin: 0 auto;
+      margin: -10px auto;
       text-align: center; } }
 
 .social__items {
