@@ -98,7 +98,7 @@ if (isMobile) {
 }
 
 
-$('[data-scroll-to]').on('click touchstart', e => {
+$('[data-scroll-to]').on('click touch', e => {
     e.preventDefault();
     const $this = $(e.currentTarget);
     const sectionIndex = parseInt($this.attr('data-scroll-to'));

@@ -1032,7 +1032,7 @@ body {
   align-self: center; }
   @media screen and (max-width: 480px) {
     .container_slider {
-      padding-top: 7.5rem; } }
+      padding-top: 0.625rem; } }
 
 .slider__menu {
   background-color: rgba(255, 255, 255, 0.9);
@@ -1122,7 +1122,8 @@ body {
   @media screen and (max-width: 480px) {
     .slider__title {
       margin-bottom: 0.3125rem;
-      width: 100%; } }
+      width: 100%;
+      font-size: 3.25rem; } }
 
 .slider__text {
   width: 80%;
@@ -1843,7 +1844,8 @@ body {
   @media screen and (max-width: 480px) {
     .order__title {
       padding-top: 0.9375rem;
-      margin-bottom: 0.9375rem; } }
+      margin-bottom: 0.9375rem;
+      font-size: 3.25rem; } }
 
 .form {
   display: -webkit-box;
@@ -2000,7 +2002,8 @@ body {
     cursor: pointer; }
 
 .map {
-  position: relative; }
+  position: relative;
+  min-height: initial; }
 
 .burger-map {
   background: url(../images/map.jpg) center no-repeat;
@@ -2044,7 +2047,8 @@ body {
       transform: translate(0, -6.25rem);
       padding-top: 0.625rem; } }
 
-.adress, .phone {
+.adress,
+.phone {
   font-family: ubuntu;
   font-weight: normal;
   color: white;
