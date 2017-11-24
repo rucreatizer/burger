@@ -400,6 +400,20 @@
             </section>
 
             <section class="section order" id="section7">
+                <!-- <div class="message__send_wrapper">
+                    <div class="message__send_form">
+                        <div class="message__send_text">Ваше сообщение успешно отправлено!<br>Мы скоро с Вами свяжемся!</div>
+                    </div>
+                </div> -->
+                <div class="form__nofill-wrapper">
+                    <div class="form__nofill">
+                        <div class="form__nofill_message">
+                            <img class="form__nofill-close" src="./images/close.png" alt="" srcset="">
+                            <div class="form__nofill_title">Заполните все данные</div>
+                            <p class="form__nofill_text">Чтобы отправить данные, заполните форму ПОЛНОСТЬЮ!</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="order__title">закажите доставку</div>
                 <div class="container">
                     <form action="" id="order-form">
@@ -408,35 +422,35 @@
                                 <div class="form-row">
                                     <label class="form-block">
                                         <span class="name__title">Имя</span>
-                                        <input type="text" class="order__name" name="name">
+                                        <input type="text" class="form__input" id="order__name" name="name">
                                     </label>
                                     <label class="form-block">
                                         <span class="name__title">Телефон</span>
-                                        <input type="text" class="order__tel" name="tel">
+                                        <input pattern="\d*" type="text" class="form__input" id="order__tel" name="tel">
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <label class="form-block">
                                         <span class="name__title">Улица</span>
-                                        <input type="text" class="form__input" name="street">
+                                        <input type="text" class="form__input" id="order__street" name="street">
                                     </label>
                                 </div>
                                 <div class="form-row">
                                     <label class="form-block">
                                         <span class="name__title">Дом</span>
-                                        <input type="text" class="form__input" name="house">
+                                        <input pattern="\d*" type="text" class="form__input" id="order__house" name="house">
                                     </label>
                                     <label class="form-block">
                                         <span class="name__title">Корпус</span>
-                                        <input type="text" class="form__input" name="korpus">
+                                        <input type="text" class="form__input" id="order__korpus" name="korpus">
                                     </label>
                                     <label class="form-block">
                                         <span class="name__title">Этаж</span>
-                                        <input type="text" class="form__input" name="floor">
+                                        <input pattern="\d*" type="text" class="form__input" id="order__floor" name="floor">
                                     </label>
                                     <label class="form-block">
                                         <span class="name__title">Квартира</span>
-                                        <input type="text" class="form__input" name="flat">
+                                        <input pattern="\d*" type="text" class="form__input" id="order__flat" name="flat">
                                     </label>
                                 </div>
                             </div>
@@ -444,19 +458,19 @@
                                 <div class="form-row">
                                     <label class="form-block">
                                         <span class="name__title">Комментарий</span>
-                                        <textarea class="form__input" cols="30" rows="5" name="comment"></textarea>
+                                        <textarea class="form__input" cols="30" rows="5" id="order__comment" name="comment"></textarea>
                                     </label>
                                 </div>
                                 <div class="form-row clearfix">
                                     <label for="payments" class="form-block">
-                                        <input class="radio__item-payment" type="radio" id="payments" name="nopay">
+                                        <input class="radio__item-payment" type="radio" id="payments" name="pay">
                                         <div class="radio__item">
                                             <div class="radio__item_select"></div>
                                         </div>
                                         <span class="name__title">Потребуется сдача</span>
                                     </label>
                                     <label for="payments2" class="form-block">
-                                        <input type="radio" class="radio__item-payment" id="payments2" name="nopay">
+                                        <input type="radio" class="radio__item-payment" id="payments2" name="pay">
                                         <div class="radio__item">
                                             <div class="radio__item_select"></div>
                                         </div>
@@ -590,6 +604,17 @@
     <script src="js/main.js"></script>
     <script src="js/onepagescroll.js"></script>
     <script src="js/ajax.js"></script>
+    <script src="js/jquery.maskedinput.js.txt"></script>
+    <script>
+        jQuery(function($) {
+            $("#order__house").mask("9999", {
+                placeholder: " "
+            });
+            $("#order__tel").mask("+7(999) 999-99-99");
+            $("#order__floor").mask("?9999");
+            $("#order__flat").mask("?9999");
+        });
+    </script>
 
 </body>
 
