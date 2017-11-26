@@ -4,7 +4,7 @@ let body = document.querySelector("body");
 
 let burger = document.getElementById("burger-menu");
 //burger.addEventListener("click touch", showMenu);
-$('.burger-menu').on('click touch', showMenu);
+$('.burger-menu').on('click tap', showMenu);
 
 let burgerClose = document.getElementById("close__button_mob");
 burgerClose.addEventListener("click", hideMenu);
